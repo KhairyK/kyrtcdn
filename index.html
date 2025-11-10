@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id-ID">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KYRT CDN — Lightweight, Fast, Simple</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              kyrt: {
+                50: '#f7fdf8',
+                100: '#ecfbf0',
+                200: '#c7f6d8',
+                500: '#07b76d',
+                700: '#058a4f'
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body { background: #ffffff; color: #0f172a; }
+      .hero-illus { max-width: 560px; }
+      pre.snippet { background: #0f172a; color: #e6ffef; padding: 1rem; border-radius: .5rem; overflow:auto; }
+      .card-fresh { border: 1px solid rgba(6,95,70,.06); border-radius: 12px; }
+      /* make bootstrap buttons slightly rounded to match tailwind look */
+      .btn { border-radius: .6rem; }
+    </style>
+  </head>
+  <body class="antialiased leading-relaxed">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <!-- inline SVG logo -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="4" fill="#07b76d"></rect>
+            <path d="M7 12h10M7 7h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="fw-bold">KYRT CDN</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+            <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+            <li class="nav-item"><a class="nav-link" href="#usage">Cara Pakai</a></li>
+            <li class="nav-item"><a class="nav-link" href="#docs">Docs</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-outline-success" href="#get">Get Started</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="container py-8">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-6">
+          <h1 class="display-5 fw-bold">KYRT CDN — Statis. Cepat. Ringan.</h1>
+          <p class="lead text-muted mb-4">Sajikan CSS, JS, dan asset statis kamu lewat subdomain cepat. Cocok untuk KYRT Framework, icon set, dan file publik lainnya.</p>
+
+          <div class="d-flex gap-3">
+            <a class="btn btn-success btn-lg" href="#usage">Mulai Sekarang</a>
+            <a class="btn btn-outline-secondary btn-lg" href="#docs">Dokumentasi</a>
+          </div>
+
+          <ul class="list-unstyled mt-4 d-flex gap-3 flex-wrap">
+            <li class="badge bg-light text-dark p-2 card-fresh">CDN URL: <code class="ms-2">cdn.kyrt.my.id</code></li>
+            <li class="badge bg-light text-dark p-2 card-fresh">Edge: Global</li>
+            <li class="badge bg-light text-dark p-2 card-fresh">SSL: Otomatis</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <div class="hero-illus mx-auto">
+            <svg viewBox="0 0 600 400" class="w-100 h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="600" height="400" rx="20" fill="#f8fdfb"></rect>
+              <circle cx="430" cy="120" r="70" fill="#ecfbf0"/>
+              <circle cx="500" cy="280" r="48" fill="#c7f6d8"/>
+              <rect x="60" y="90" width="300" height="200" rx="12" fill="#fff" stroke="#e6f7ee"></rect>
+              <path d="M100 140h200v6H100zM100 170h150v6H100zM100 200h180v6H100z" fill="#dff8e6"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="features" class="container py-6">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 card-fresh">
+            <h5 class="mb-2">Cepat &amp; Global</h5>
+            <p class="text-muted">Assets di-cache dan served dari edge terdekat sehingga loading halaman jadi kilat.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 card-fresh">
+            <h5 class="mb-2">Mudah</h5>
+            <p class="text-muted">Cukup upload file statis dan gunakan URL CDN. Tanpa konfigurasi server rumit.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 card-fresh">
+            <h5 class="mb-2">Secure</h5>
+            <p class="text-muted">HTTPS otomatis, header keamanan, dan kontrol cache yang sederhana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white py-5 mt-6 border-top">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+          <strong>KYRT CDN</strong>
+          <div class="text-muted small">© "KYRT" — dibuat oleh Sholehuddin Khairy</div>
+        </div>
+        <div class="text-muted small">Made with PHPin & MA Labs</div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
+
+    <script>
+      // copy-to-clipboard helper
+      document.querySelectorAll('[data-copy-target]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const sel = document.querySelector(btn.getAttribute('data-copy-target'));
+          if (!sel) return;
+          const text = sel.innerText.trim();
+          try {
+            await navigator.clipboard.writeText(text);
+            btn.textContent = 'Tersalin ✓';
+            setTimeout(() => btn.textContent = 'Salin ' + (sel.id === 'cssSnippet' ? 'CSS' : 'JS'), 1800);
+          } catch (e) {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta);
+            ta.select(); document.execCommand('copy'); ta.remove();
+            btn.textContent = 'Tersalin ✓';
+            setTimeout(() => btn.textContent = 'Salin', 1800);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
