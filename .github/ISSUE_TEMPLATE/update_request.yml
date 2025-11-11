@@ -1,0 +1,65 @@
+name: 🔄 Request Pembaruan Paket
+description: Ajukan pembaruan versi paket yang sudah ada di KYRT CDN
+title: "[UPDATE] "
+labels: ["package update"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih telah menjaga **KYRT CDN** tetap up to date!  
+        Gunakan form ini untuk meminta pembaruan versi pada paket yang sudah tersedia.
+
+  - type: input
+    id: nama-paket
+    attributes:
+      label: Nama Paket
+      description: Nama paket yang ingin diperbarui.
+      placeholder: Contoh: bootstrap, tailwindcss, jquery
+    validations:
+      required: true
+
+  - type: input
+    id: versi-lama
+    attributes:
+      label: Versi Saat Ini
+      description: Versi paket yang sedang tersedia di KYRT CDN.
+      placeholder: Contoh: 5.3.2
+
+  - type: input
+    id: versi-baru
+    attributes:
+      label: Versi Baru
+      description: Versi terbaru yang ingin kamu ajukan.
+      placeholder: Contoh: 5.3.3
+    validations:
+      required: true
+
+  - type: input
+    id: sumber
+    attributes:
+      label: Sumber / URL Resmi
+      description: Link ke npm, GitHub, jsDelivr, atau repo resmi paket dengan versi baru.
+      placeholder: Contoh: https://www.npmjs.com/package/bootstrap
+
+  - type: textarea
+    id: catatan
+    attributes:
+      label: Catatan Tambahan
+      description: Informasi tambahan atau perubahan penting di versi baru (opsional).
+      placeholder: |
+        Contoh:
+        - Ada perbaikan bug
+        - Penambahan fitur baru
+        - Update dependencies
+
+  - type: checkboxes
+    id: konfirmasi
+    attributes:
+      label: Konfirmasi
+      options:
+        - label: Saya sudah memastikan versi baru ini stabil dan resmi
+          required: true
+        - label: Saya sudah mengecek dan versi ini belum tersedia di KYRT CDN
+          required: true
