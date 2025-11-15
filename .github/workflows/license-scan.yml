@@ -21,3 +21,4 @@ jobs:
       - name: Run License Checker
         uses: apache/skywalking-eyes/license-eye@v0.6.0
         with:
+         config: .licenserc.yaml
