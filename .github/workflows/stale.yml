@@ -1,0 +1,30 @@
+name: Close Stale Issues and PRs
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # tiap hari jam 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Run stale action
+        uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-message: >
+            Halo! Issue ini sudah tidak ada aktivitas selama 30 hari.
+            Kalau masih relevan, silakan komentar biar tidak ditutup otomatis!
+          stale-pr-message: >
+            PR ini sudah tidak ada aktivitas selama 30 hari.
+            Kalau PR ini masih aktif, tinggal komentar ya!
+          close-issue-message: "Issue ditutup otomatis karena tidak ada aktivitas."
+          close-pr-message: "PR ditutup otomatis karena tidak ada aktivitas."
+          exempt-issue-labels: "pinned,security,important"
+          exempt-pr-labels: "pinned,security,important"
