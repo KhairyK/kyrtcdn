@@ -51,8 +51,8 @@ body:
     id: package_name
     attributes:
       label: Nama Paket
-      description: "Masukkan nama paket Anda agar orang-orang mengetahui paket yang ingin dimasukkan."
-      placeholder: jQuery, React, Bootstrap
+      description: "Masukkan nama paket Anda."
+      placeholder: "Contoh: jQuery"
     validations:
       required: true
 
@@ -60,8 +60,8 @@ body:
     id: package_version
     attributes:
       label: Versi Paket
-      description: "Masukkan versi paket Anda. (Contoh: 1.0.0)"
-      placeholder: 1.0.0
+      description: "Versi paket Anda."
+      placeholder: "Contoh: 1.0.0"
     validations:
       required: true
 
@@ -69,8 +69,8 @@ body:
     id: npm_link
     attributes:
       label: Link NPM Paket
-      description: "Link resmi paket Anda dari NPM."
-      placeholder: https://www.npmjs.com/package/example
+      description: "Masukkan link resmi paket Anda dari NPM."
+      placeholder: "https://www.npmjs.com/package/example"
     validations:
       required: true
 
@@ -78,8 +78,8 @@ body:
     id: repository_link
     attributes:
       label: Link Repository / Homepage
-      description: "Opsional. Berisi link GitHub, dokumentasi, atau website resmi paket."
-      placeholder: https://github.com/username/repo
+      description: "Opsional. Link GitHub atau website paket."
+      placeholder: "https://github.com/username/repo"
     validations:
       required: false
 
@@ -87,20 +87,17 @@ body:
     id: download_count
     attributes:
       label: Jumlah Download NPM
-      description: "Masukkan jumlah download paket Anda (minimal 2.000)."
-      placeholder: 2500
+      description: "Masukkan total download (minimal 2.000)."
+      placeholder: "Contoh: 2500"
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: include_files
     attributes:
       label: File yang Ingin Di-include ke CDN
-      description: "Pisahkan dengan baris baru. Contoh: dist/main.js, dist/style.css"
-      placeholder: |
-        dist/main.js
-        dist/style.css
-        LICENSE
+      description: "Masukkan file, pisahkan dengan koma."
+      placeholder: "dist/main.js, dist/style.css, LICENSE"
     validations:
       required: true
 
@@ -108,10 +105,10 @@ body:
     id: is_static
     attributes:
       label: Apakah Paket Anda Statis?
-      description: "Pilih YA jika paket bersifat statis (wajib)."
+      description: "Pilih YA jika paket statis (wajib)."
       options:
-        - YA, paket saya statis
-        - TIDAK, paket saya dinamis (tidak memenuhi syarat)
+        - "YA, paket saya statis"
+        - "TIDAK, paket saya dinamis"
     validations:
       required: true
 
@@ -119,7 +116,7 @@ body:
     id: reason
     attributes:
       label: Kenapa Paket Anda Cocok Masuk KYRT CDN?
-      placeholder: Jelaskan secara singkat...
+      placeholder: "Contoh: Paket saya populer dan digunakan oleh banyak developer."
     validations:
       required: true
 
@@ -127,7 +124,7 @@ body:
     id: notes
     attributes:
       label: Catatan Tambahan
-      placeholder: Jika ada hal lain yang ingin disampaikan, tulis di sini.
+      placeholder: "Contoh: Tidak ada."
     validations:
       required: false
 
@@ -136,6 +133,6 @@ body:
     attributes:
       label: Persetujuan
       options:
-        - label: Saya menyetujui semua syarat yang telah ditentukan oleh KYRT CDN.
+        - label: "Saya menyetujui semua syarat KYRT CDN."
     validations:
       required: true
