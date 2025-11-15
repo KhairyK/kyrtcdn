@@ -1,0 +1,13 @@
+header:
+  license:
+    spdx-id: MIT
+    copyright-owner: KhairyK
+  paths:
+    - "**/*.js"
+    - "**/*.css"
+    - "**/*.html"
+    - "**/*.php"
+    - "**/*.ts"
+  language:
+    shell:
+      extensions: [".sh"]
