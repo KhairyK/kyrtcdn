@@ -1,0 +1,71 @@
+name: Auto Minify CSS & JS
+
+on:
+  push:
+    paths:
+      - "**/*.css"
+      - "**/*.js"
+  pull_request:
+    paths:
+      - "**/*.css"
+      - "**/*.js"
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Minifier Tools
+        run: |
+          npm install -g terser csso-cli
+
+      - name: Find & Minify CSS and JS
+        run: |
+          echo "🔍 Scanning for CSS & JS files…"
+
+          # Minify JS
+          find . -type f -name "*.js" ! -name "*.min.js" | while read -r file; do
+            minified="${file%.js}.min.js"
+            if [ ! -f "$minified" ]; then
+              echo "⚡ Minifying JS: $file → $minified"
+              terser "$file" -o "$minified" --compress --mangle || echo "❌ Error minifying $file"
+            else
+              echo "✔ Skip: Minified JS already exists for $file"
+            fi
+          done
+
+          # Minify CSS
+          find . -type f -name "*.css" ! -name "*.min.css" | while read -r file; do
+            minified="${file%.css}.min.css"
+            if [ ! -f "$minified" ]; then
+              echo "⚡ Minifying CSS: $file → $minified"
+              csso "$file" --output "$minified" || echo "❌ Error minifying $file"
+            else
+              echo "✔ Skip: Minified CSS already exists for $file"
+            fi
+          done
+
+      - name: Commit Minified Files
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "Auto-minify CSS/JS files"
+            git push
+            echo "🚀 Auto-minified files committed!"
+          else
+            echo "✨ No changes to commit."
+          fi
