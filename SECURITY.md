@@ -82,7 +82,7 @@ Silakan buat laporan melalui:
 
 👉 **Issue Template → Report Abuse**  
 atau  
-👉 **Email**: abuse@kyrtcdn.my.id
+👉 **Email**: musickhairy@gmail.com
 
 Kami akan meninjau dalam < 24 jam.
 
