@@ -1,0 +1,67 @@
+name: "🚨 Report Abuse"
+description: "Laporkan paket yang bermasalah atau berbahaya di KYRT CDN"
+labels:
+  - "🚨 Abuse Report"
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Laporan Penyalahgunaan / Abuse"
+
+  - type: markdown
+    attributes:
+      value: |
+        Gunakan form ini jika Anda menemukan paket yang:
+        - Mengandung malware
+        - Melakukan pencurian data
+        - Melanggar lisensi
+        - Mengandung konten tidak pantas
+        - Berindikasi penipuan
+        - Tidak sesuai dengan aturan KYRT CDN
+
+        Mohon isi semua informasi dengan jujur dan lengkap.
+
+  - type: input
+    id: package_name
+    attributes:
+      label: Nama Paket
+      description: "Masukkan nama paket yang ingin dilaporkan."
+      placeholder: "contoh: bad-lib"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versi Paket
+      description: "Versi paket yang bermasalah."
+      placeholder: "contoh: 1.2.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Jelaskan Masalah / Penyalahgunaan
+      description: "Ceritakan detail kenapa paket ini perlu dilaporkan."
+      placeholder: "contoh: Paket ini mencoba mengirim data user ke server luar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proof
+    attributes:
+      label: Bukti Pendukung
+      description: "Tambahkan log, screenshot, atau analisis (opsional tetapi sangat membantu)."
+      placeholder: "contoh: hasil analisis code scanning..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Konfirmasi
+      options:
+        - label: "Saya melapor dengan jujur dan bertanggung jawab."
+    validations:
+      required: true
