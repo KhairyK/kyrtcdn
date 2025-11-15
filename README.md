@@ -33,6 +33,7 @@ KYRT CDN hanya menerima:
 ```html
 <script src="https://cdn.kyrt.my.id/[package]/[version]/dist/main.js"></script>
 <link rel="stylesheet" href="https://cdn.kyrt.my.id/[package]/[version]/dist/style.css">
+```
 
 Ganti [package] dan [version] dengan paket yang tersedia di CDN.
 
