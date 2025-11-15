@@ -1,0 +1,24 @@
+name: License Scan
+
+on:
+  push:
+    paths:
+      - "**/*.js"
+      - "**/*.css"
+      - "**/*.html"
+      - "**/*.md"
+  pull_request:
+
+jobs:
+  license-scan:
+    name: Scan License Headers
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run License Checker
+        uses: apache/skywalking-eyes/license-eye@v0.6.0
+        with:
+          config: .licenserc.yaml
