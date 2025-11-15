@@ -1,0 +1,141 @@
+name: "📦 Packages Request"
+description: "Buat Paket NPM Kamu Agar Masuk ke KYRT CDN"
+labels:
+  - "📦 Packages Request"
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Request Paket Anda ke KYRT CDN"
+
+  - type: markdown
+    attributes:
+      value: |
+        Terima Kasih Anda Sudah Datang ke KYRT CDN!  
+        Jika Anda ingin memasukkan paket Anda, Anda harus memenuhi 6 syarat di bawah ini:
+
+        **Syarat Wajib:**
+        - Paket Anda harus berasal dari **NPM**, bukan GitHub.
+        - Paket Anda harus bersifat **statis** (tidak dinamis).
+        - Paket Anda harus telah didownload **lebih dari 2.000 kali**.
+        - Paket Anda **tidak boleh aneh-aneh**, harus paket yang serius/dipakai banyak orang.
+        - Paket Anda harus memiliki file config **\`kyrt-cdn-package(s).json\`**.
+        - Jika Anda **tidak mau membuat config JSON**, Anda boleh mengisi form di bawah.
+
+        ---
+        ### Contoh `kyrt-cdn-package(s).json`
+        ```json
+        {
+          "name": "example-package",
+          "version": "1.0.0",
+          "description": "The Example Package.",
+          "author": "Jhon Doe",
+          "license": "MIT",
+          "homepage": "https://example.com/",
+          "repository": {
+            "type": "git",
+            "url": "https://example.com/example/examplePackage"
+          },
+          "includeFile": [
+            "dist/main.js",
+            "LICENSE",
+            "dist/style.css"
+          ]
+        }
+        ```
+        ---
+
+        ## Form (Jika Anda Tidak Menggunakan Config JSON)
+
+  - type: input
+    id: package_name
+    attributes:
+      label: Nama Paket
+      description: "Masukkan nama paket Anda agar orang-orang mengetahui paket yang ingin dimasukkan."
+      placeholder: jQuery, React, Bootstrap
+    validations:
+      required: true
+
+  - type: input
+    id: package_version
+    attributes:
+      label: Versi Paket
+      description: "Masukkan versi paket Anda. (Contoh: 1.0.0)"
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: npm_link
+    attributes:
+      label: Link NPM Paket
+      description: "Link resmi paket Anda dari NPM."
+      placeholder: https://www.npmjs.com/package/example
+    validations:
+      required: true
+
+  - type: input
+    id: repository_link
+    attributes:
+      label: Link Repository / Homepage
+      description: "Opsional. Berisi link GitHub, dokumentasi, atau website resmi paket."
+      placeholder: https://github.com/username/repo
+    validations:
+      required: false
+
+  - type: input
+    id: download_count
+    attributes:
+      label: Jumlah Download NPM
+      description: "Masukkan jumlah download paket Anda (minimal 2.000)."
+      placeholder: 2500
+    validations:
+      required: true
+
+  - type: textarea
+    id: include_files
+    attributes:
+      label: File yang Ingin Di-include ke CDN
+      description: "Pisahkan dengan baris baru. Contoh: dist/main.js, dist/style.css"
+      placeholder: |
+        dist/main.js
+        dist/style.css
+        LICENSE
+    validations:
+      required: true
+
+  - type: dropdown
+    id: is_static
+    attributes:
+      label: Apakah Paket Anda Statis?
+      description: "Pilih YA jika paket bersifat statis (wajib)."
+      options:
+        - YA, paket saya statis
+        - TIDAK, paket saya dinamis (tidak memenuhi syarat)
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Kenapa Paket Anda Cocok Masuk KYRT CDN?
+      placeholder: Jelaskan secara singkat...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Catatan Tambahan
+      placeholder: Jika ada hal lain yang ingin disampaikan, tulis di sini.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Persetujuan
+      options:
+        - label: Saya menyetujui semua syarat yang telah ditentukan oleh KYRT CDN.
+    validations:
+      required: true
