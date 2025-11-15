@@ -1,0 +1,82 @@
+name: "🔄 Update Request"
+description: "Meminta pembaruan versi paket yang sudah terdaftar di KYRT CDN"
+labels:
+  - "🔄 Update Request"
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Request Pembaruan Paket KYRT CDN"
+
+  - type: markdown
+    attributes:
+      value: |
+        Silakan isi form di bawah untuk meminta pembaruan versi paket yang sudah ada di **KYRT CDN**.
+
+        Pastikan:
+        - Paket Anda **sudah ada** di KYRT CDN.
+        - Versi yang diminta **benar-benar tersedia di NPM**.
+        - Pastikan file yang ingin di-update **tetap statis**.
+
+  - type: input
+    id: package_name
+    attributes:
+      label: Nama Paket
+      description: "Masukkan nama paket yang ingin diperbarui."
+      placeholder: "Contoh: bootstrap"
+    validations:
+      required: true
+
+  - type: input
+    id: current_version
+    attributes:
+      label: Versi Saat Ini di KYRT CDN
+      description: "Versi paket yang sekarang ada di KYRT CDN."
+      placeholder: "Contoh: 5.3.0"
+    validations:
+      required: true
+
+  - type: input
+    id: new_version
+    attributes:
+      label: Versi Baru yang Diminta
+      description: "Versi baru yang ingin kamu update (harus tersedia di NPM)."
+      placeholder: "Contoh: 5.3.2"
+    validations:
+      required: true
+
+  - type: input
+    id: npm_link
+    attributes:
+      label: Link NPM Paket
+      description: "Masukkan link resmi NPM untuk memastikan versinya valid."
+      placeholder: "https://www.npmjs.com/package/bootstrap"
+    validations:
+      required: true
+
+  - type: textarea
+    id: update_files
+    attributes:
+      label: File yang Perlu Di-update
+      description: "Masukkan file yang perlu diupdate. Pisahkan dengan koma."
+      placeholder: "dist/js/bootstrap.min.js, dist/css/bootstrap.min.css"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Catatan Tambahan
+      description: "Opsional. Tambahkan catatan lain jika diperlukan."
+      placeholder: "Contoh: Perubahan minor pada CSS."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Persetujuan
+      options:
+        - label: "Saya memastikan versi baru benar tersedia di NPM dan file bersifat statis."
+    validations:
+      required: true
