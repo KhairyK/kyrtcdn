@@ -6,8 +6,8 @@ Kami ingin memastikan semua kontributor merasa nyaman, dihargai, dan aman ketika
 Dokumen ini berlaku untuk semua repositori PHPin termasuk:
 - KYRT CDN  
 - ZooronJS
-- KYRT Icon  
-- Dokumentasi & Website  
+- KYRT Icon
+- Dokumentasi & Website
 
 ---
 
