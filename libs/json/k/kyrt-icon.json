@@ -7,7 +7,7 @@
   "homepage": "https://kyrt.my.id/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KhairyL/kyrt-icon.git"
+    "url": "https://github.com/KhairyK/kyrt-icon.git"
   },
   "includeFile": [
   	"dist/kyrt-svg_icon.css", 
