@@ -6,53 +6,39 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: "## Request Paket Anda ke KYRT CDN"
+      value: |
+        ## Request Paket Anda ke KYRT CDN
+
+        Terima Kasih Anda Sudah Datang ke KYRT CDN!  
+        Ada dua cara untuk mengajukan paket:
+        1. **Isi URL ke file konfigurasi JSON** (`kyrt-cdn-package.json`) yang sudah tersedia di internet (raw URL).  
+           - Jika URL valid dan file JSON valid, maka **Anda boleh melewati** pengisian form di bawah.
+        2. **Atau isi form** di bawah ini secara lengkap jika Anda tidak menyediakan JSON config.
+
+        **Catatan:** GitHub Issue Forms saat ini belum mendukung conditional show/hide fields secara native.  
+        Untuk itu kami memakai aturan sederhana: *Jika Anda memberikan JSON Config URL yang valid, form bisa dilewati; jika tidak, mohon isi semua field di form.*
+
+  - type: input
+    id: json_config_url
+    attributes:
+      label: URL JSON Config (opsional)
+      description: "Masukkan raw URL yang mengarah ke file `kyrt-cdn-package.json` (contoh: https://raw.githubusercontent.com/username/repo/main/kyrt-cdn-package.json). Jika diisi dan valid, Anda boleh melewatkan pengisian form di bawah."
+      placeholder: "https://raw.githubusercontent.com/username/repo/main/kyrt-cdn-package.json"
+    validations:
+      required: false
 
   - type: markdown
     attributes:
       value: |
-        Terima Kasih Anda Sudah Datang ke KYRT CDN!  
-        Jika Anda ingin memasukkan paket Anda, Anda harus memenuhi 6 syarat di bawah ini:
-
-        **Syarat Wajib:**
-        - Paket Anda harus berasal dari **NPM**, bukan GitHub.
-        - Paket Anda harus bersifat **statis** (tidak dinamis).
-        - Paket Anda harus telah didownload **lebih dari 2.000 kali**.
-        - Paket Anda **tidak boleh aneh-aneh**, harus paket yang serius/dipakai banyak orang.
-        - Paket Anda harus memiliki file config **\`kyrt-cdn-package(s).json\`**.
-        - Jika Anda **tidak mau membuat config JSON**, Anda boleh mengisi form di bawah.
-
-        ---
-        ### Contoh `kyrt-cdn-package(s).json`
-        ```json
-        {
-          "name": "example-package",
-          "version": "1.0.0",
-          "description": "The Example Package.",
-          "author": "Jhon Doe",
-          "license": "MIT",
-          "homepage": "https://example.com/",
-          "repository": {
-            "type": "git",
-            "url": "https://example.com/example/examplePackage"
-          },
-          "includeFile": [
-            "dist/main.js",
-            "LICENSE",
-            "dist/style.css"
-          ]
-        }
-        ```
-        ---
-
-        ## Form (Jika Anda Tidak Menggunakan Config JSON)
+        ---  
+        **Jika Anda TIDAK mengisi field di atas (JSON Config URL), mohon lengkapi form di bawah.**
 
   - type: input
     id: package_name
     attributes:
       label: Nama Paket
       description: "Masukkan nama paket Anda."
-      placeholder: "Contoh: jQuery"
+      placeholder: "Contoh: jquery"
     validations:
       required: true
 
