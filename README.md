@@ -1,5 +1,5 @@
 # 🚀 KYRT CDN  
-CDN Cepat, Ringan, dan Gratis untuk Semua Developer Indonesia.
+CDN Cepat, Ringan, Open Source, dan Gratis untuk Semua Developer Indonesia.
 
 [![CDN Status](https://img.shields.io/badge/KYRT%20CDN-Online-brightgreen?style=for-the-badge)](https://kyrtcdn.my.id/)
 [![Author](https://img.shields.io/badge/Author-KhairyK-blue?style=for-the-badge)](https://github.com/KhairyK)
@@ -19,6 +19,7 @@ KYRT CDN hanya menerima:
 - Paket dengan **>2.000 download**
 - Paket yang **serius & aman**
 - Paket yang memiliki `kyrt-cdn-package.json` atau mengisi form request
+- Anda Juga Bisa Request Gambar Ke KYRT CDN
 
 ---
 
@@ -65,15 +66,15 @@ Jika kamu ingin paketmu masuk ke KYRT CDN:
 
 🛠️ Developer Documentation
 
-kyrt-cdn-package.json format
+- kyrt-cdn-package.json format
 
-Cara update package
+- Cara update package
 
-Cara remove/deprecate package
+- Cara remove/deprecate package
 
-Security Policy
+- Security Policy
 
-Code of Conduct
+- Code of Conduct
 
 
 Dokumentasi lengkap ada di folder /docs.
@@ -85,11 +86,11 @@ Dokumentasi lengkap ada di folder /docs.
 
 Repo ini memakai:
 
-🔍 CodeQL Analyzer
+- 🔍 CodeQL Analyzer
 
-🛡️ Validasi Paket Otomatis
+- 🛡️ Validasi Paket Otomatis
 
-🚨 Abuse Report System
+- 🚨 Abuse Report System
 
 
 Lihat SECURITY.md untuk info lengkapnya.
