@@ -1,16 +1,39 @@
+########################################
+#  CORS GLOBAL (SEMUA FILE)
+########################################
 [[headers]]
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Headers = "*"
-    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Methods = "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+    Access-Control-Allow-Credentials = "false"
+
+########################################
+#  HTML SELALU UPDATE (NO CACHE)
+########################################
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+
+########################################
+#  JS DAN CSS → CACHE SETAHUN
+########################################
+[[headers]]
+  for = "/**/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
- for = "/*.html"
- [headers.values]
-   Cache-Control = "no-store"
+  for = "/**/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
+########################################
+#  GAMBAR → CACHE SETAHUN
+########################################
 [[headers]]
- for = "/libs/*"
- [headers.values]
-   Cache-Control = "public, max-age=31536000, immutable"
+  for = "/**/*.{png,jpg,jpeg,gif,svg,webp,avif}"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
