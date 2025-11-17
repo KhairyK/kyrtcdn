@@ -9,7 +9,9 @@ CDN Cepat, Ringan, dan Gratis untuk Semua Developer Indonesia.
 ---
 
 ## 📦 Apa Itu KYRT CDN?
-**KYRT CDN** adalah Content Delivery Network sederhana dan cepat yang dibuat untuk mempermudah developer dalam menggunakan paket NPM secara statis.
+**KYRT CDN** adalah Content Delivery Network sederhana dan cepat yang dibuat untuk mempermudah developer dalam menggunakan paket NPM secara Statis.
+
+_Semua File CSS/JS Akan Di Minifier Langsung_
 
 KYRT CDN hanya menerima:
 - Paket dari **NPM**
