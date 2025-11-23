@@ -1,0 +1,63 @@
+/*
+  IcoMoon Font Icons — Custom Build
+  Font: mai.woff
+  Version: 1.0.0
+  Build: 2025-11-23 16:00 UTC+7
+  Author: Sholehuddin Khairy (KhairyK)
+  License: MIT LICENSE
+  NPMCDN/NPDN: https://npmcdn.kyrt.my.id/npm/fontic@1.0.0/dist/fontic.css
+  DO NOT GO TO masterDist/ DIRECTORY, IT CONTAINS BINARY FONT ICON SOURCE
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('masterDist/mai.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-github:before { content: "\eab0"; }
+.icon-npm:before { content: "\eab1"; }
+.icon-apple:before { content: "\eabe"; }
+.icon-html5:before { content: "\eae4"; }
+.icon-css3:before { content: "\eae6"; }
+.icon-connection:before { content: "\e91b"; }
+.icon-folder:before { content: "\e92f"; }
+.icon-folder-open:before { content: "\e930"; }
+.icon-printer:before { content: "\e954"; }
+.icon-keyboard:before { content: "\e955"; }
+.icon-bug:before { content: "\e999"; }
+.icon-rocket:before { content: "\e9a5"; }
+.icon-fire:before { content: "\e9a9"; }
+.icon-bin:before { content: "\e9ac"; }
+.icon-bin2:before { content: "\e9ad"; }
+.icon-airplane:before { content: "\e9af"; }
+.icon-road:before { content: "\e9b1"; }
+.icon-amazon:before { content: "\ea87"; }
+.icon-google:before { content: "\ea88"; }
+.icon-spotify:before { content: "\ea94"; }
+.icon-youtube:before { content: "\ea9d"; }
+.icon-steam2:before { content: "\eaad"; }
+.icon-wordpress:before { content: "\eab4"; }
+.icon-appleinc:before { content: "\eabe"; }
+.icon-android:before { content: "\eac0"; }
+.icon-windows:before { content: "\eac1"; }
+.icon-windows8:before { content: "\eac2"; }
+.icon-stackoverflow:before { content: "\ead0"; }
+.icon-chrome:before { content: "\ead9"; }
+.icon-firefox:before { content: "\eada"; }
+.icon-IE:before { content: "\eadb"; }
+.icon-edge:before { content: "\eadc"; }
+.icon-html-five:before { content: "\eae4"; } /* alias html5 */
+.icon-git:before { content: "\eae7"; }
+/*# sourceMappingURL=fontic.css.map */
