@@ -37,3 +37,11 @@
   for = "/**/*.{png,jpg,jpeg,gif,svg,webp,avif}"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+########################################
+#  FONT FILES → CACHE SETAHUN
+########################################
+[[headers]]
+  for = "/**/*.{woff2,woff,ttf,otf,eot}"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
