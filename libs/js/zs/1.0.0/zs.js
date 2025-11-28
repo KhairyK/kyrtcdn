@@ -1,3 +1,4 @@
+// MIT LICENSE
 (() => {
   "use strict";
 
