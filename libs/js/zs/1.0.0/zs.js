@@ -57,7 +57,7 @@
     js = js.replace(/@while\s*\((.+?)\)\s*{/g, 'while ($1) {');
     js = js.replace(/@on\s+(\w+)\s+([#.\w-]+)\s*{/g,
     'document.querySelector("$2").addEventListener("$1", () => {');
-    js = js.replace(/relocationTo\s*=\s*"([^"]+)"/g, 'window.location.href = "$1";');
+    js = js.replace(/@relocationTo\s*=\s*"([^"]+)"/g, 'window.location.href = "$1";');
     
     /* ────── CLEANUP ────── */
     js = js.replace(/\n\s*\n/g, '\n');
