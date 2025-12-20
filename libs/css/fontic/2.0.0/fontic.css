@@ -1,3 +1,17 @@
+:root {
+  --icon-s:    clamp(0.75rem, 0.6rem + 0.3vw, 0.9rem);
+  --icon-m:    clamp(1rem, 0.85rem + 0.4vw, 1.2rem);
+  --icon-l:    clamp(1.25rem, 1.05rem + 0.5vw, 1.5rem);
+
+  --icon-xl:   clamp(1.5rem, 1.25rem + 0.6vw, 1.9rem);
+  --icon-xxl:  clamp(2rem, 1.6rem + 0.8vw, 2.5rem);
+
+  --icon-b:    clamp(2.5rem, 2rem + 1vw, 3.2rem);
+  --icon-bx:   clamp(3.2rem, 2.6rem + 1.5vw, 4.2rem);
+  --icon-bxx:  clamp(4rem, 3.2rem + 2vw, 5.5rem);
+  --icon-bxxx: clamp(5rem, 4rem + 3vw, 7.5rem);
+}
+
 @font-face {
   font-family: 'fontic';
   src:  url('fonts/fontic.eot?cvzxrp');
@@ -32,6 +46,18 @@
   text-rendering: geometricPrecision;
   text-shadow: rgba(0,0,0,0.01) 0 0 1px;
 }
+
+.icon-s    { font-size: var(--icon-s); }
+.icon-m    { font-size: var(--icon-m); }
+.icon-l    { font-size: var(--icon-l); }
+
+.icon-xl   { font-size: var(--icon-xl); }
+.icon-xxl  { font-size: var(--icon-xxl); }
+
+.icon-b    { font-size: var(--icon-b); }
+.icon-bx   { font-size: var(--icon-bx); }
+.icon-bxx  { font-size: var(--icon-bxx); }
+.icon-bxxx { font-size: var(--icon-bxxx); }
 
 .fontic-lamp:before {
   content: "\e033";
