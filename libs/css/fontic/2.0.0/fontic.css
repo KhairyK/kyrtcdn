@@ -25,26 +25,16 @@
 }
 
 .fontic {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'fontic' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
+  font-display: swap;
   line-height: 1;
 
-  /* Better Font Rendering From Font-Set@1.0.0 =========== */
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke: 0.0px;
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smooth: always;
-  font-smooth: 2em;
-  -apple-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision;
-  text-shadow: rgba(0,0,0,0.01) 0 0 1px;
 }
 
 .icon-s    { font-size: var(--icon-s); }
